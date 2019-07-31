@@ -1,3 +1,4 @@
+require 'pry'
 class Scraper
   attr_accessor :file, :parsed_file, :all_pokemon, :db
 
@@ -10,6 +11,7 @@ class Scraper
 
   def catch_em_all
     self.all_pokemon = parsed_file.css(".infocard-tall")
+    binding.pry
   end
 
   def get_pokemon_name_from(node)
